@@ -58,6 +58,7 @@ def watcher():
 			print(tf, dweet_time, timedelta, UTC_parse(dweet_time))
 			if timedelta < 4*60*60:
 				msg = f"URGENT: Time delta for the {ticker} -{tf}- Confluence Cortex has been silent for {str(round(timedelta/60, 0))} hours. Check script status ASAP"
+				msg = f"URGENT: Time delta for the {ticker} {tf} Confluence Cortex has been silent for {str(round(timedelta/60, 0))}"
 				print(msg) 
 				bot_sendtext(msg,['-427231496'])
 
